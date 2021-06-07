@@ -36,12 +36,18 @@ lookup table for the driving ages and countries. Prompt for the age, and display
 public class App {
     public static void main(String[] args){
         Scanner input = new Scanner(System.in);
-        String password = "PogO123";
 
         //inputs
         System.out.print("What is your age? ");
-        String age = input.nextLine();
+        String age_buff = input.nextLine();
 
-        
+        //parsing
+        int age = Integer.parseInt(age_buff);
+
+        //Conditional
+        final String output = age >= 16 ? "You are old enough to legally drive" : "You are not odl enough to legally drive";
+
+        //outputs
+        System.out.println(output);
     }
 }
